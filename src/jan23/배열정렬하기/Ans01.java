@@ -1,16 +1,9 @@
-package jan23;
+package jan23.배열정렬하기;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Solution {
-    public int[] solution(int[] arr) {
-        Arrays.sort(arr);
-        return arr;
-    }
-}
-
-public class Exam01 {
+public class Ans01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("입력할 정수의 갯수는?");
@@ -22,8 +15,12 @@ public class Exam01 {
             arr[i] = sc.nextInt();
         }
 
-        Solution solution = new Solution();
-        int[] sort = solution.solution(arr);
+        int[] sort = solution(arr);
         System.out.println(Arrays.toString(sort));
+    }
+
+    public static int[] solution(int[] arr) {
+        Arrays.sort(arr);
+        return arr;
     }
 }
