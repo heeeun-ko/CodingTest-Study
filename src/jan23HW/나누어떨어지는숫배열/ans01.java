@@ -1,10 +1,10 @@
-package jan23HW;
+package jan23HW.나누어떨어지는숫배열;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class 나누어떨어지는숫자배열 {
+public class ans01 {
     static List<Integer> solution(int[] arr, int divisor) {
         List<Integer> res = new ArrayList<>();
 
