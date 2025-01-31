@@ -1,7 +1,6 @@
 package jan23HW.두개뽑아서더하기;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,8 +20,7 @@ public class ans01 {
             }
         }
 
-        List<Integer> newRes = res.stream().distinct().collect(Collectors.toList());
-        Collections.sort(newRes);
+        List<Integer> newRes = res.stream().distinct().sorted().collect(Collectors.toList());
 
         return newRes;
     }
