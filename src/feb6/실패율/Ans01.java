@@ -8,27 +8,11 @@ import java.util.stream.DoubleStream;
 // 실패... ㅜㅜ
 
 public class Ans01 {
-    static Double[] solution(int n, int[] stages) {
-        int[] result = new int[n];
-
-        Double[] failureRateList = new Double[n];
-        for (int i = 1; i <= n; i++) {
-            int count = 0;
-            int userNum = stages.length;
-            for (int stage : stages) {
-                if (stage == i) {
-                    count++;
-                }
-            }
-            failureRateList[i] = (double) (count / userNum);
-            userNum -= count;
-        }
-
-//        for (int i = 0; i < N; i++) {
+//    static Double[] solution(int n, int[] stages) {
+//        int[] result = new int[n];
 //
-//        }
-        return failureRateList;
-    }
+//        return failureRateList;
+//    }
 
     public static void main(String[] args) {
         int n = 5;
@@ -63,7 +47,5 @@ public class Ans01 {
             }
         }
         System.out.println(Arrays.toString(result));
-
-
     }
 }
