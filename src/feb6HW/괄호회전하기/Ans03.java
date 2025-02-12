@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Ans03 {
     public static void main(String[] args) {
-        String s = "{[}]";
+        String s = "[](){}";
         System.out.println(solution(s));
     }
 
@@ -14,14 +14,14 @@ public class Ans03 {
             String rotateStr = s.substring(i) + s.substring(0, i);
             Stack<Character> stack = new Stack<>();
             for (int j = 0; j < rotateStr.length(); j++) {
-                char c = rotateStr.charAt(i);
+                char c = rotateStr.charAt(j);
                 if (stack.isEmpty()) {
                     stack.push(c);
                 } else if (c == ')' && stack.peek() == '(') {
                     stack.pop();
                 } else if (c == '}' && stack.peek() == '{') {
                     stack.pop();
-                } else if (c == ']' && stack.peek() == ']') {
+                } else if (c == ']' && stack.peek() == '[') {
                     stack.pop();
                 } else {
                     stack.push(c);
