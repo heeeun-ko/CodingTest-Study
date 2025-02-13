@@ -5,7 +5,6 @@ import java.util.Stack;
 public class Ans01 {
     public static void main(String[] args) {
         String s = "10 20 30 40";
-
         System.out.println(solution(s));
     }
 
