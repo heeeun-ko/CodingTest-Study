@@ -1,12 +1,9 @@
-package feb13.주가격;
+package feb13.주식가격;
 
-// 배열 사용시.. 런타임 에러 발생
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Stack;
 
-public class Ans02 {
+public class Ans03 {
     public static void main(String[] args) {
         int[] prices = {1, 2, 3, 2, 3};
 
@@ -18,18 +15,18 @@ public class Ans02 {
         int[] result = new int[prices.length];
 
         for (int i = 0; i < prices.length; i++) {
-            List<Integer> list = new ArrayList<>();
+            Stack<Integer> stack = new Stack<>();
             for (int j = i; j < prices.length; j++) {
                 if (prices[i] <= prices[j]) {
-                    list.add(prices[i]);
+                    stack.push(prices[i]);
                 } else {
                     if (i != prices.length - 1) {
-                        list.add(prices[i]);
+                        stack.push(prices[i]);
                     }
                     break;
                 }
             }
-            result[i] = list.size() - 1;
+            result[i] = stack.size() - 1;
         }
         return result;
     }

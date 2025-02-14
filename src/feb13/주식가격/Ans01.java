@@ -1,9 +1,11 @@
-package feb13.주가격;
+package feb13.주식가격;
+
+// 93.3 / 100.0점
 
 import java.util.Arrays;
 import java.util.Stack;
 
-public class Ans03 {
+public class Ans01 {
     public static void main(String[] args) {
         int[] prices = {1, 2, 3, 2, 3};
 
@@ -13,16 +15,14 @@ public class Ans03 {
 
     static int[] solution(int[] prices) {
         int[] result = new int[prices.length];
-
         for (int i = 0; i < prices.length; i++) {
             Stack<Integer> stack = new Stack<>();
             for (int j = i; j < prices.length; j++) {
-                if (prices[i] <= prices[j]) {
-                    stack.push(prices[i]);
-                } else {
-                    if (i != prices.length - 1) {
-                        stack.push(prices[i]);
-                    }
+                if (stack.isEmpty()) {
+                    stack.push(prices[j]);
+                } else if (stack.peek() >= prices[i]) {
+                    stack.push(prices[j]);
+                } else if (stack.peek() < prices[i]) {
                     break;
                 }
             }
