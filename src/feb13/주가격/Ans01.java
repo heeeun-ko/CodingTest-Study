@@ -20,7 +20,7 @@ public class Ans01 {
             for (int j = i; j < prices.length; j++) {
                 if (stack.isEmpty()) {
                     stack.push(prices[j]);
-                } else if (stack.peek() >= prices[i]) {
+                } else if (prices[j] >= prices[i]) {
                     stack.push(prices[j]);
                 } else if (stack.peek() < prices[i]) {
                     break;
