@@ -1,4 +1,4 @@
-package feb6.실패율;
+package feb06.실패율;
 
 import java.util.Arrays;
 import java.util.HashMap;

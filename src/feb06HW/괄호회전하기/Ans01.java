@@ -1,4 +1,4 @@
-package feb6HW.괄호회전하기;
+package feb06HW.괄호회전하기;
 
 //프로그래머스 92.9 / 100.0
 

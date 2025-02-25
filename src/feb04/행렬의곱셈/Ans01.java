@@ -1,4 +1,4 @@
-package feb4.행렬의곱셈;
+package feb04.행렬의곱셈;
 
 import java.util.Arrays;
 

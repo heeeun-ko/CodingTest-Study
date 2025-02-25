@@ -1,4 +1,4 @@
-package feb4.모의고사;
+package feb04.모의고사;
 
 import java.util.ArrayList;
 import java.util.List;

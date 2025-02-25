@@ -1,4 +1,4 @@
-package feb6HW.올바른괄호;
+package feb06HW.올바른괄호;
 
 public class Ans01 {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Ans01 {
         if (closeCnt != openCnt) {
             flag = false;
         }
-        
+
         return flag;
     }
 }
