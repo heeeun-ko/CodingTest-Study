@@ -12,7 +12,7 @@ public class Ans01 {
 
     static String[] solution(int[] nodes) {
         String[] result = new String[3];
-        result[0] = preorder(nodes, 0).trim();
+        result[0] = preorder(nodes, 0).trim();  // 마지막 공백 제거
         result[1] = inorder(nodes, 0).trim();
         result[2] = postorder(nodes, 0).trim();
 
@@ -20,10 +20,11 @@ public class Ans01 {
     }
 
     private static String preorder(int[] nodes, int idx) {
-        if (idx >= nodes.length) {
+        if (idx >= nodes.length) {  // idx가 범위를 벗어나면 빈 문자열 반환
             return "";
         }
 
+        // 루트 노드 -> 왼쪽 자식 노드 -> 오른쪽 자식 노드 순으로 재귀 호출하여 결과를 이어 붙임
         return nodes[idx] + " " +
                 preorder(nodes, idx * 2 + 1) +
                 preorder(nodes, idx * 2 + 2);
