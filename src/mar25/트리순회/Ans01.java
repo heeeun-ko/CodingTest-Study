@@ -49,5 +49,4 @@ public class Ans01 {
                 postorder(nodes, idx * 2 + 2) +
                 nodes[idx] + " ";
     }
-
 }
