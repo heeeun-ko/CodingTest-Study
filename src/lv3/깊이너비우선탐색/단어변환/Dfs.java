@@ -1,6 +1,6 @@
 package lv3.깊이너비우선탐색.단어변환;
 
-public class Ans01 {
+public class Dfs {
 
     static int answer = 0;
     static boolean[] visited;  // 단어 방문 여부 체크
@@ -42,8 +42,15 @@ public class Ans01 {
 
             // 한 글자 빼고 모두 같은 경우
             if (j == begin.length() - 1) {
+
+                // words[i] 단어를 방문했다고 표시
                 visited[i] = true;
+
+                // begin을 words[i]로 바꾸고 DFS 재귀 호출
                 dfs(words[i], target, words, cnt + 1);
+
+                // 탐색이 끝나고 되돌아오면, 다시 방문 표시를 해제
+                // 다른 경로에서도 이 단어를 사용할 수 있어야 하니까, 사용하고 되돌아오면 방문 표시를 해제하기!
                 visited[i] = false;
             }
         }
