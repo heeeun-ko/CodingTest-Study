@@ -16,11 +16,11 @@ public class Ans01 {
     public static int solution(String begin, String target, String[] words) {
         visited = new boolean[words.length];
 
-        bfs(begin, target, words, 0);
+        dfs(begin, target, words, 0);
         return answer;
     }
 
-    private static void bfs(String begin, String target, String[] words, int cnt) {
+    private static void dfs(String begin, String target, String[] words, int cnt) {
 
         if (begin.equals(target)) {
             answer = cnt;
@@ -43,7 +43,7 @@ public class Ans01 {
             // 한 글자 빼고 모두 같은 경우
             if (j == begin.length() - 1) {
                 visited[i] = true;
-                bfs(words[i], target, words, cnt + 1);
+                dfs(words[i], target, words, cnt + 1);
                 visited[i] = false;
             }
         }
