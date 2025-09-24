@@ -1,4 +1,4 @@
-package lv2.스택.프로세스;
+package lv2.큐.프로세스;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
